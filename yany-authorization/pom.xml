@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yany-web</artifactId>
+        <groupId>com.yany</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>yany-authorization</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>yany-authorization-basic</module>
+        <module>yany-authorization-jwt</module>
+        <module>yany-authorization-api</module>
+        <module>yany-authorization-oauth2</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>5.0.4.RELEASE</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.3</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.7</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.25</version>
+            </dependency>
+
+            <!-- authorization start -->
+            <dependency>
+                <groupId>com.yany</groupId>
+                <artifactId>yany-authorization-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yany</groupId>
+                <artifactId>yany-authorization-basic</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yany</groupId>
+                <artifactId>yany-authorization-oauth2-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <!-- authorization end -->
+
+            <!-- yany commons start -->
+            <dependency>
+                <groupId>com.yany</groupId>
+                <artifactId>yany-commons-controller</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <!-- yany commons end -->
+
+            <dependency>
+                <groupId>com.yany</groupId>
+                <artifactId>yany-commons-utils</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yany</groupId>
+                <artifactId>yany-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
